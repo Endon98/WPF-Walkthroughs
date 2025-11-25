@@ -1,13 +1,19 @@
-﻿using System.Text;
-using System.Windows;
+﻿using Microsoft.VisualBasic;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AutoSizeButtonLibrary
 {
@@ -40,11 +46,15 @@ namespace AutoSizeButtonLibrary
     ///     <MyNamespace:CustomControl1/>
     ///
     /// </summary>
-    public class CustomControl1 : Control
+    public class AutoSizeButton : Button
     {
-        static CustomControl1()
+        public AutoSizeButton()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomControl1), new FrameworkPropertyMetadata(typeof(CustomControl1)));
+            // The following code enables custom design-mode logic.
+            // The GetIsInDesignMode check and the following design-time 
+            // code are optional and shown only for demonstration.
+            if (DesignerProperties.GetIsInDesignMode(this))
+                Content = "Design mode active";
         }
     }
 }
