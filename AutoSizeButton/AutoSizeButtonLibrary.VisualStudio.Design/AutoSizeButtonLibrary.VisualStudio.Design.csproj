@@ -1,10 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <BaseOutputPath>C:\Users\Akeel Alexander\source\repos\work\WPF Walkthrough\AutoSizeButtonLibrary\bin</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FrameworkExtensions.PresentationCore" Version="1.0.0.34" />
+    <PackageReference Include="PresentationFramework" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AutoSizeButtonLibrary\AutoSizeButtonLibrary.csproj" />
+  </ItemGroup>
 
 </Project>
