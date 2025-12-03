@@ -124,6 +124,7 @@
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 41);
             this.sum.TabIndex = 1;
+            this.sum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // difference
             // 
@@ -133,6 +134,7 @@
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 41);
             this.difference.TabIndex = 2;
+            this.difference.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -182,6 +184,7 @@
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 41);
             this.product.TabIndex = 3;
+            this.product.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -231,6 +234,7 @@
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 41);
             this.quotient.TabIndex = 4;
+            this.quotient.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
