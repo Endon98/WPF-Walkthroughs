@@ -61,5 +61,11 @@ namespace MathQuiz
             dividedRightLabel.Text = divisor.ToString();
             quotient.Value = 0;
         }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            StartTheQuiz();
+            startButton.Enabled = false;
+        }
     }
 }
