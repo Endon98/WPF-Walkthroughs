@@ -50,6 +50,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.dividedRightLabel = new System.Windows.Forms.Label();
             this.dividedLeftLabel = new System.Windows.Forms.Label();
+            this.startButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.difference)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
@@ -122,7 +123,7 @@
             this.sum.MaximumSize = new System.Drawing.Size(100, 0);
             this.sum.Name = "sum";
             this.sum.Size = new System.Drawing.Size(100, 41);
-            this.sum.TabIndex = 6;
+            this.sum.TabIndex = 1;
             // 
             // difference
             // 
@@ -131,7 +132,7 @@
             this.difference.MaximumSize = new System.Drawing.Size(100, 0);
             this.difference.Name = "difference";
             this.difference.Size = new System.Drawing.Size(100, 41);
-            this.difference.TabIndex = 11;
+            this.difference.TabIndex = 2;
             // 
             // label2
             // 
@@ -180,7 +181,7 @@
             this.product.MaximumSize = new System.Drawing.Size(100, 0);
             this.product.Name = "product";
             this.product.Size = new System.Drawing.Size(100, 41);
-            this.product.TabIndex = 16;
+            this.product.TabIndex = 3;
             // 
             // label6
             // 
@@ -229,7 +230,7 @@
             this.quotient.MaximumSize = new System.Drawing.Size(100, 0);
             this.quotient.Name = "quotient";
             this.quotient.Size = new System.Drawing.Size(100, 41);
-            this.quotient.TabIndex = 21;
+            this.quotient.TabIndex = 4;
             // 
             // label8
             // 
@@ -271,11 +272,23 @@
             this.dividedLeftLabel.Text = "?";
             this.dividedLeftLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // startButton
+            // 
+            this.startButton.AutoSize = true;
+            this.startButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.Location = new System.Drawing.Point(147, 298);
+            this.startButton.Name = "startButton";
+            this.startButton.Size = new System.Drawing.Size(161, 39);
+            this.startButton.TabIndex = 0;
+            this.startButton.Text = "Start the quiz";
+            this.startButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(478, 349);
+            this.Controls.Add(this.startButton);
             this.Controls.Add(this.quotient);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -334,6 +347,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label dividedRightLabel;
         private System.Windows.Forms.Label dividedLeftLabel;
+        private System.Windows.Forms.Button startButton;
     }
 }
 
