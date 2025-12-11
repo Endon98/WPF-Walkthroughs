@@ -35,6 +35,7 @@ namespace MathQuiz
 
         public void StartTheQuiz()
         {
+            timeLabel.BackColor = System.Drawing.SystemColors.Control;
             addend1 = randomizer.Next(51);
             addend2 = randomizer.Next(51);
             plusLeftLabel.Text = addend1.ToString();
@@ -104,6 +105,12 @@ namespace MathQuiz
                 // display the new time left by updating the 
                 // Time Left label.
                 timeLeft = timeLeft - 1;
+
+                if (timeLeft <= 5)
+                    timeLabel.BackColor = Color.Red;
+              
+                
+
                 timeLabel.Text = timeLeft + " seconds";
             }
             else
