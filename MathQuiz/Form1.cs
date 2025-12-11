@@ -138,5 +138,21 @@ namespace MathQuiz
                 answerBox.Select(0, lengthOfAnswer);    
             }
         }// answer_Enter
+
+        private void answer_Changed(object sender, EventArgs e)
+        {
+            NumericUpDown answerBox = sender as NumericUpDown;
+            if(answerBox != null)
+            {
+               var Labels = this.Controls.OfType<Label>()
+                                .Where(x => x.Location.Y == answerBox.Location.Y)
+                                .OrderBy(x=> x.Location.X)
+                                .Take(3);
+                if (answerBox.Value ==  (Convert.ToInt32(Labels.ElementAt(0).Text) + Convert.ToInt32(Labels.ElementAt(2).Text)))
+                {
+                    System.Media.SystemSounds.Exclamation.Play();
+                }
+            }
+        }
     }// class Form1
 }
