@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -147,10 +146,35 @@ namespace MathQuiz
                var Labels = this.Controls.OfType<Label>()
                                 .Where(x => x.Location.Y == answerBox.Location.Y)
                                 .OrderBy(x=> x.Location.X)
-                                .Take(3);
-                if (answerBox.Value ==  (Convert.ToInt32(Labels.ElementAt(0).Text) + Convert.ToInt32(Labels.ElementAt(2).Text)))
+                                .Take(3)
+                                .Select(x=> x.Text);
+
+                switch (Labels.ElementAt(1))
                 {
-                    System.Media.SystemSounds.Exclamation.Play();
+                    case "+":
+                        if(addend1 + addend2 == answerBox.Value)
+                        {
+                            System.Media.SystemSounds.Exclamation.Play();
+                        }
+                        break;
+                    case "-":
+                        if(minuend - subtrahend == answerBox.Value)
+                        {
+                            System.Media.SystemSounds.Exclamation.Play();
+                        }
+                        break;
+                    case "×":
+                        if(multiplicand * multiplier == answerBox.Value)
+                        {
+                            System.Media.SystemSounds.Exclamation.Play();
+                        }
+                        break;
+                    case "÷":
+                        if(dividend / divisor == answerBox.Value)
+                        {
+                            System.Media.SystemSounds.Exclamation.Play();
+                        }
+                        break;
                 }
             }
         }
